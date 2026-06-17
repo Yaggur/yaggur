@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ГлавХозБаза</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">ГлавХозБаза</a>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link nav__link--active">Главная</a></li>
+          <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+          <li><a href="#" class="nav__link">О нас</a></li>
+          <li><a href="#" class="nav__link">Доставка</a></li>
+          <li><a href="#" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="theme-toggle" id="themeToggle" title="Переключить тему"
+          aria-label="Тёмная/светлая тема">🌙</button>
+
+        <a href="personal.html" class="header__account" title="Личный кабинет">
+          <span class="header__account-icon">👤</span>
+          <span>Кабинет</span>
+        </a>
+
+        <a href="cart.html" class="header__btn" title="Корзина">
+          🛒
+          <span class="header__cart-count">0</span>
+        </a>
+      </div>
+
+      <button class="burger" aria-label="Меню">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero__slide active" style="background-image: url('img/woman.png');">
+      <div class="container">
+        <div class="hero__content">
+          <h1 class="hero__title">Бытовая химия и хозтовары оптом</h1>
+          <p class="hero__text">Более 20 000 товаров для дома и бизнеса. Доставка по всей России.</p>
+          <a href="catalog.html" class="btn">Перейти в каталог</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__slide" style="background-image: url('img/ermak.png');">
+      <div class="container">
+        <div class="hero__content">
+          <h1 class="hero__title">Новое поступление инструментов</h1>
+          <p class="hero__text">Профессиональный инструмент от ведущих производителей.</p>
+          <a href="catalog.html" class="btn">Смотреть</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Категории товаров</h2>
+      <div class="categories-grid">
+        <a href="catalog.html" class="category-card">
+          <img src="img/cristal.png" alt="Бытовая химия" />
+          <div class="category-card__overlay"><span class="category-card__title">Бытовая химия</span></div>
+        </a>
+        <a href="catalog.html" class="category-card">
+          <img src="img/ermak.png" alt="Инструменты" />
+          <div class="category-card__overlay"><span class="category-card__title">Инструменты</span></div>
+        </a>
+        <a href="catalog.html" class="category-card">
+          <img src="img/hoztovar.png" alt="Хозтовары" />
+          <div class="category-card__overlay"><span class="category-card__title">Хозтовары</span></div>
+        </a>
+        <a href="catalog.html" class="category-card">
+          <img src="img/season.png" alt="Сезонные товары" />
+          <div class="category-card__overlay"><span class="category-card__title">Сезонные товары</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <h2>Популярные товары</h2>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-card__img"><img src="img/ave.png" alt="Товар" /></div>
+          <div class="product-card__body">
+            <h3 class="product-card__title">Средство для мытья посуды AVE 1л</h3>
+            <div class="product-card__price">120 ₽</div>
+            <button class="btn btn--sm btn--block add-to-cart" data-id="prod_01" data-title="Средство для мытья посуды AVE 1л" data-price="120" data-img="img/ave.png">
+              В корзину
+            </button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-card__img"><img src="img/gel.png" alt="Товар" /></div>
+          <div class="product-card__body">
+            <h3 class="product-card__title">Гель для стирки Cristal 3л</h3>
+            <div class="product-card__price">450 ₽</div>
+            <button class="btn btn--sm btn--block add-to-cart" data-id="prod_01" data-title="Средство для мытья посуды AVE 1л" data-price="120" data-img="img/gel.png">
+              В корзину
+            </button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-card__img"><img src="img/shvabra.png" alt="Товар" /></div>
+          <div class="product-card__body">
+            <h3 class="product-card__title">Швабра с отжимом Хозяюшка</h3>
+            <div class="product-card__price">890 ₽</div>
+            <button class="btn btn--sm btn--block add-to-cart" data-id="prod_01" data-title="Средство для мытья посуды AVE 1л" data-price="120" data-img="img/shvabra.png">
+              В корзину
+            </button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-card__img"><img src="img/gubki.png" alt="Товар" /></div>
+          <div class="product-card__body">
+            <h3 class="product-card__title">Набор губок Master Fresh 5 шт</h3>
+            <div class="product-card__price">150 ₽</div>
+            <button class="btn btn--sm btn--block add-to-cart" data-id="prod_01" data-title="Средство для мытья посуды AVE 1л" data-price="120" data-img="img/gubki .png">
+              В корзину
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Наши преимущества</h2>
+      <div class="advantages">
+        <div class="advantage">
+          <div class="advantage__icon">🚚</div>
+          <h3 class="advantage__title">Быстрая доставка</h3>
+          <p class="advantage__text">Отправляем заказы в день оформления. Доставка по Москве и области</p>
+        </div>
+        <div class="advantage">
+          <div class="advantage__icon">💰</div>
+          <h3 class="advantage__title">Низкие цены</h3>
+          <p class="advantage__text">Работаем напрямую с производителями. Оптовые и розничные цены</p>
+        </div>
+        <div class="advantage">
+          <div class="advantage__icon">✓</div>
+          <h3 class="advantage__title">Гарантия качества</h3>
+          <p class="advantage__text">Только сертифицированная продукция. Возврат в течение 14 дней</p>
+        </div>
+        <div class="advantage">
+          <div class="advantage__icon">📞</div>
+          <h3 class="advantage__title">Поддержка 24/7</h3>
+          <p class="advantage__text">Консультируем по всем вопросам. Поможем с выбором товаров</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reviews">
+    <div class="container">
+      <h2>Отзывы клиентов</h2>
+      <div class="reviews-slider">
+        <div class="reviews-track">
+          <div class="review-card">
+            <div class="review-content">
+              <p class="review-text">"Отличный магазин! Заказываю здесь бытовую химию для своего кафе уже полгода.
+                Всегда свежие товары, адекватные цены и быстрая доставка."</p>
+              <div class="review-author">Александр Петров</div>
+              <div class="review-date">15 мая 2026</div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-content">
+              <p class="review-text">"Покупала здесь швабру с отжимом и набор губок. Качество товаров на высоте, цены
+                ниже чем в обычных магазинах."</p>
+              <div class="review-author">Елена Смирнова</div>
+              <div class="review-date">8 мая 2026</div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-content">
+              <p class="review-text">"Заказывал оптом инструменты для строительной бригады. Всё чётко, быстро, по
+                оптовым ценам."</p>
+              <div class="review-author">Михаил Козлов</div>
+              <div class="review-date">2 мая 2026</div>
+            </div>
+          </div>
+          <div class="review-card">
+            <div class="review-content">
+              <p class="review-text">"Удобный сайт, большой ассортимент. Заказ оформила за 5 минут. Доставили на
+                следующий день."</p>
+              <div class="review-author">Анна Волкова</div>
+              <div class="review-date">28 апреля 2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="reviews-nav">
+          <button class="reviews-btn reviews-prev">←</button>
+          <button class="reviews-btn reviews-next">→</button>
+        </div>
+        <div class="reviews-dots">
+          <span class="reviews-dot active" data-index="0"></span>
+          <span class="reviews-dot" data-index="1"></span>
+          <span class="reviews-dot" data-index="2"></span>
+          <span class="reviews-dot" data-index="3"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Как нас найти</h2>
+      <div class="location-grid">
+        <div class="location-info">
+          <h3>Контактная информация</h3>
+          <div class="location-details">
+            <div class="location-item">
+              <div class="location-icon">📍</div>
+              <div class="location-text"><strong>Адрес</strong>г. Абакан, ул. Итыгина 17м</div>
+            </div>
+            <div class="location-item">
+              <div class="location-icon">📞</div>
+              <div class="location-text"><strong>Телефон</strong>+7 (495) 123-45-67<br />+7 (916) 123-45-67</div>
+            </div>
+            <div class="location-item">
+              <div class="location-icon">✉️</div>
+              <div class="location-text"><strong>Email</strong>info@glavhozbaza.ru<br />zakaz@glavhozbaza.ru</div>
+            </div>
+          </div>
+          <div class="location-hours">
+            <strong>🕐 Режим работы</strong>
+            <p>Понедельник - Пятница: 9:00 - 18:00</p>
+            <p>Суббота: 9:00 - 16:00</p>
+            <p>Воскресенье: выходной</p>
+          </div>
+          <a href="tel:+74951234567" class="btn" style="margin-top: 24px;">Позвонить нам</a>
+        </div>
+        <div class="location-map">
+          <iframe src="https://yandex.ru/maps/-/CPxwiU9X" frameborder="0" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 class="footer-title">ГлавХозБаза</h3>
+          <p style="color: rgba(255,255,255,0.7); font-size: 14px; line-height: 1.8;">
+            Оптово-розничный склад бытовой химии,<br />
+            хозтоваров и инструментов.<br /><br />
+            📍 г. Абакан, ул. Итыгина 17м<br />
+            📞 +7 (495) 123-45-67
+          </p>
+        </div>
+        <div>
+          <h3 class="footer-title">Каталог</h3>
+          <a href="catalog.html?cat=chemicals" class="footer-link">Бытовая химия</a>
+          <a href="catalog.html?cat=tools" class="footer-link">Инструменты</a>
+          <a href="catalog.html?cat=household" class="footer-link">Хозтовары</a>
+          <a href="catalog.html" class="footer-link">Все товары</a>
+        </div>
+        <div>
+          <h3 class="footer-title">Покупателям</h3>
+          <a href="#" class="footer-link">Доставка</a>
+          <a href="#" class="footer-link">Оплата</a>
+          <a href="#" class="footer-link">Возврат</a>
+          <a href="login.html" class="footer-link">Личный кабинет</a>
+        </div>
+        <div>
+          <h3 class="footer-title">Информация</h3>
+          <a href="#" class="footer-link">О компании</a>
+          <a href="#" class="footer-link">Контакты</a>
+          <a href="#" class="footer-link">Политика конфиденциальности</a>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 ООО «ГлавХозБаза». Все права защищены.</div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

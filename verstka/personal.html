@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Личный кабинет — ГлавХозБаза</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">ГлавХозБаза</a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Главная</a></li>
+          <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="personal.html" class="header__btn" title="Кабинет"></a>
+      </div>
+      <button class="burger"><span class="burger__line"></span><span class="burger__line"></span><span
+          class="burger__line"></span></button>
+    </div>
+  </header>
+
+  <main class="container section">
+    <div class="panel">
+      <aside class="panel-sidebar">
+        <ul class="panel-menu">
+          <li class="active" data-tab="orders">📦 Мои заказы</li>
+          <li data-tab="profile">👤 Профиль</li>
+          <li data-tab="settings">️ Настройки</li>
+          <li style="margin-top: 20px; border-top: 1px solid var(--color-border); padding-top: 20px;">
+            <a href="admin.html" style="display: flex; align-items: center; gap: 8px; color: var(--color-primary);">🛠
+              Админ-панель</a>
+          </li>
+          <li><a href="login.html" style="color: var(--color-text-light);">Выйти из аккаунта</a></li>
+        </ul>
+      </aside>
+
+      <div class="panel-content">
+        <div id="orders" class="panel-tab">
+          <h2 style="margin-bottom: 24px;">История заказов</h2>
+          <div id="orders-list"></div>
+        </div>
+        <div id="profile" class="panel-tab" style="display: none;">
+          <h2 style="margin-bottom: 24px;">Мои данные</h2>
+          <form class="form" style="max-width: 100%;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+              <div class="form__group"><label class="form__label">Имя</label><input type="text" class="form__input"
+                  value="Иван"></div>
+              <div class="form__group"><label class="form__label">Фамилия</label><input type="text" class="form__input"
+                  value="Иванов"></div>
+            </div>
+            <div class="form__group"><label class="form__label">Email</label><input type="email" class="form__input"
+                value="ivan@example.com"></div>
+            <div class="form__group"><label class="form__label">Телефон</label><input type="tel" class="form__input"
+                value="+7 (916) 000-00-00"></div>
+            <button type="submit" class="btn" style="width: auto; margin-top: 10px;">Сохранить изменения</button>
+          </form>
+        </div>
+        <div id="settings" class="panel-tab" style="display: none;">
+          <h2 style="margin-bottom: 24px;">Настройки безопасности</h2>
+          <p style="color: var(--color-text-light); margin-bottom: 20px;">Измените пароль или настройки уведомлений.</p>
+          <button class="btn btn--outline">Изменить пароль</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">© 2026 ООО «ГлавХозБаза»</div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

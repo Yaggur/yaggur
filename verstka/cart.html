@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Корзина</title>
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">ГлавХозБаза</a>
+
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Главная</a></li>
+                    <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+                    <li><a href="#" class="nav__link">О нас</a></li>
+                    <li><a href="#" class="nav__link">Доставка</a></li>
+                    <li><a href="#" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <button class="theme-toggle" id="themeToggle" title="Переключить тему">🌙</button>
+                <a href="personal.html" class="header__account">
+                    <span class="header__account-icon">👤</span>
+                    <span>Кабинет</span>
+                </a>
+                <a href="cart.html" class="header__btn" title="Корзина">
+                    🛒
+                    <span class="header__cart-count">0</span>
+                </a>
+            </div>
+
+            <button class="burger" aria-label="Меню">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container section">
+        <h1 style="margin-bottom: 32px;">Корзина</h1>
+
+        <div id="cart-container">
+            <div style="text-align: center; padding: 40px; color: var(--color-text-light);">
+                Загрузка корзины...
+            </div>
+        </div>
+
+        <div id="cart-summary"
+            style="display: none; margin-top: 40px; border-top: 1px solid var(--color-border); padding-top: 24px;">
+            <div
+                style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div>
+                    <span style="font-size: 18px; font-weight: 600;">Итого:</span>
+                    <span id="cart-total-price"
+                        style="font-size: 24px; font-weight: 700; color: var(--color-primary); margin-left: 10px;">0
+                        ₽</span>
+                </div>
+                <div style="display: flex; gap: 16px;">
+                    <button class="btn btn--outline" onclick="clearCartGlobal()">Очистить корзину</button>
+                    <button class="btn" onclick="checkoutOrder()">Оформить заказ</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="order-success-modal"
+        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:1000; justify-content:center; align-items:center;">
+        <div
+            style="background:white; padding:40px; border-radius:8px; text-align:center; max-width:400px; width:90%; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+            <h2 style="color:green; margin-bottom:15px; font-size: 24px;">Заказ оформлен!</h2>
+            <p style="margin-bottom: 10px;">Спасибо за покупку.</p>
+            <p style="color:#666; font-size:14px; margin-bottom: 20px;">Ваш заказ принят в обработку. Информация
+                сохранена в личном кабинете.</p>
+            <button class="btn" onclick="closeModal('order-success-modal')">Закрыть</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">© 2026 ООО «ГлавХозБаза». Все права защищены.</div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
