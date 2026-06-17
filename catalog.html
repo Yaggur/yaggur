@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Каталог товаров</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">ГлавХозБаза</a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Главная</a></li>
+          <li><a href="catalog.html" class="nav__link nav__link--active">Каталог</a></li>
+          <li><a href="#" class="nav__link">О нас</a></li>
+          <li><a href="#" class="nav__link">Доставка</a></li>
+          <li><a href="#" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="login.html" class="header__btn" title="Вход"></a>
+        <a href="#" class="header__btn" title="Корзина">🛒<span class="header__cart-count">0</span></a>
+      </div>
+      <button class="burger" aria-label="Меню">
+        <span class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container section" style="padding-top: 40px;">
+    <nav style="font-size: 13px; color: var(--color-text-light); margin-bottom: 20px;">
+      <a href="index.html">Главная</a> / <span>Каталог</span>
+    </nav>
+    <h1>Каталог товаров</h1>
+    <div class="catalog-layout">
+      <aside class="filters">
+        <div class="filter-group">
+          <div class="filter-title">Категория</div>
+          <ul class="filter-list">
+            <li><label class="filter-checkbox"><input type="checkbox" value="all" checked> Все товары</label></li>
+            <li><label class="filter-checkbox"><input type="checkbox" value="chemicals"> Бытовая химия</label></li>
+            <li><label class="filter-checkbox"><input type="checkbox" value="tools"> Инструменты</label></li>
+            <li><label class="filter-checkbox"><input type="checkbox" value="household"> Хозтовары</label></li>
+          </ul>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-title">Цена, ₽</div>
+          <div style="display: flex; gap: 10px; align-items: center;">
+            <input type="number" class="form__input" placeholder="От" style="width: 100%; padding: 8px 12px;"
+              data-filter="price-min">
+            <span>—</span>
+            <input type="number" class="form__input" placeholder="До" style="width: 100%; padding: 8px 12px;"
+              data-filter="price-max">
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-title">Бренд</div>
+          <ul class="filter-list">
+            <li><label class="filter-checkbox"><input type="checkbox" value="synergetic"> Synergetic</label></li>
+            <li><label class="filter-checkbox"><input type="checkbox" value="ocean"> Ocean Clean</label></li>
+            <li><label class="filter-checkbox"><input type="checkbox" value="comfort"> Comfort Factor</label></li>
+          </ul>
+        </div>
+
+        <button class="btn btn--outline btn--block" id="apply-filters">Применить</button>
+      </aside>
+
+      <div>
+        <div class="sort-bar">
+          <span style="color: var(--color-text-light);">Найдено: <b id="products-count">12</b> товаров</span>
+          <select class="form__select" id="sort-select" style="width: auto; padding: 8px 12px;">
+            <option value="popular">По популярности</option>
+            <option value="price-asc">Сначала дешёвые</option>
+            <option value="price-desc">Сначала дорогие</option>
+            <option value="name">По названию</option>
+          </select>
+        </div>
+
+        <div class="products-grid" id="products-grid">
+          <div class="product-card" data-category="chemicals" data-price="120" data-brand="ocean">
+            <div class="product-card__img"><img src="img/product1.jpg" alt="Товар"></div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Средство для посуды 1л</h3>
+              <div class="product-card__price">120 ₽</div>
+              <button class="btn btn--sm btn--block add-to-cart">В корзину</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="chemicals" data-price="450" data-brand="synergetic">
+            <div class="product-card__img"><img src="img/product2.jpg" alt="Товар"></div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Гель для стирки 3л</h3>
+              <div class="product-card__price">450 ₽</div>
+              <button class="btn btn--sm btn--block add-to-cart">В корзину</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="household" data-price="890" data-brand="comfort">
+            <div class="product-card__img"><img src="img/product3.jpg" alt="Товар"></div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Швабра с отжимом</h3>
+              <div class="product-card__price">890 ₽</div>
+              <button class="btn btn--sm btn--block add-to-cart">В корзину</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="tools" data-price="1200" data-brand="comfort">
+            <div class="product-card__img"><img src="img/product4.jpg" alt="Товар"></div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Набор отвёрток (6 шт)</h3>
+              <div class="product-card__price">1 200 ₽</div>
+              <button class="btn btn--sm btn--block add-to-cart">В корзину</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">© 2026 ООО «ГлавХозБаза». Все права защищены.</div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

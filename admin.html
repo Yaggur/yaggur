@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Админ-панель — ГлавХозБаза</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="admin.html" class="logo">Админ-панель</a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">На сайт</a></li>
+          <li><a href="personal.html" class="nav__link">Кабинет</a></li>
+        </ul>
+      </nav>
+      <button class="burger"><span class="burger__line"></span><span class="burger__line"></span><span
+          class="burger__line"></span></button>
+    </div>
+  </header>
+
+  <main class="container section">
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-value">12</div>
+        <div class="stat-label">Новых заказов</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">248</div>
+        <div class="stat-label">Товаров в базе</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">89</div>
+        <div class="stat-label">Клиентов</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">₽ 450к</div>
+        <div class="stat-label">Выручка за месяц</div>
+      </div>
+    </div>
+
+    <div
+      style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 16px;">
+      <h2>Управление товарами</h2>
+      <button class="btn" id="open-add-modal">+ Добавить товар</button>
+    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Название</th>
+          <th>Цена</th>
+          <th>Категория</th>
+          <th>Действия</th>
+        </tr>
+      </thead>
+      <tbody id="admin-products">
+        <tr>
+          <td>101</td>
+          <td>Средство для посуды 1л</td>
+          <td>120 ₽</td>
+          <td>Химия</td>
+          <td><button class="btn btn--sm btn--outline" style="margin-right: 8px;">✎</button><button class="btn btn--sm"
+              style="background: var(--color-text);">🗑</button></td>
+        </tr>
+        <tr>
+          <td>102</td>
+          <td>Гель для стирки 3л</td>
+          <td>450 ₽</td>
+          <td>Химия</td>
+          <td><button class="btn btn--sm btn--outline" style="margin-right: 8px;">✎</button><button class="btn btn--sm"
+              style="background: var(--color-text);">🗑</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <div class="modal-overlay" id="add-product-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Добавить товар</h3>
+        <button class="modal-close" id="close-modal">×</button>
+      </div>
+      <form id="add-product-form" class="form" style="max-width: 100%;">
+        <div class="form__group"><label class="form__label">Название товара</label><input type="text"
+            class="form__input" required></div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form__group"><label class="form__label">Цена (₽)</label><input type="number" class="form__input"
+              required></div>
+          <div class="form__group"><label class="form__label">Категория</label>
+            <select class="form__select">
+              <option>Химия</option>
+              <option>Инструменты</option>
+              <option>Хозтовары</option>
+            </select>
+          </div>
+        </div>
+        <div class="form__group"><label class="form__label">Ссылка на изображение</label><input type="url"
+            class="form__input" placeholder="https://..."></div>
+        <button type="submit" class="btn btn--block" style="margin-top: 16px;">Сохранить товар</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">© 2026 ООО «ГлавХозБаза»</div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
